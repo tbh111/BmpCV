@@ -3,6 +3,7 @@
 
 #include <windows.h>
 #include <tchar.h>
+#include <direct.h>
 #include "bmp.h"
 typedef unsigned char uchar;
 

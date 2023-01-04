@@ -24,7 +24,14 @@ namespace BmpCV {
         start_info.hStdInput = pipe_read;
         start_info.hStdOutput = pipe_write;
         start_info.hStdError = HANDLE(STD_ERROR_HANDLE);
-        LPCSTR gui_path = _T("C:\\Users\\13087\\Desktop\\DIP\\BmpCV\\Qt_GUI\\pack1\\Qt_GUI.exe");
+
+//        LPCSTR gui_path = _T("C:\\Users\\13087\\Desktop\\DIP\\BmpCV\\Qt_GUI\\pack1\\Qt_GUI.exe");
+        LPTSTR setting_path = new char[256];
+        LPTSTR gui_path = new char[256];
+        strcpy(setting_path, _T("..\\..\\setting.ini"));
+        UINT length = GetPrivateProfileString("GUI_EXE_PATH", "PATH", NULL, gui_path, 256, setting_path);
+        if(length <= 0)
+            throw CV_runtime_error(FILE_OPEN_ERROR, "GUI path error");
         if(!CreateProcess(gui_path, NULL, NULL, NULL, TRUE, 0, NULL, NULL, &start_info, &proc_info)) {
             CloseHandle(pipe_read);
             CloseHandle(pipe_write);
@@ -59,7 +66,9 @@ namespace BmpCV {
 
     void createWindow() {
         pipeInit();
-        processSpawn();
+        if(!processSpawn()) {
+            throw CV_runtime_error(FILE_OPEN_ERROR, "Can't create GUI process, check setting.ini");
+        }
     }
 
     void imgShow(const Img& src_img) {

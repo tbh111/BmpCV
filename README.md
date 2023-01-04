@@ -14,4 +14,4 @@ gui：BMP图像的显示
 
 img_proc：BMP图像的基本变换
 
-Qt_GUI：gui模块调用的前端GUI界面
+Qt_GUI：gui模块调用的前端GUI界面，调用路径在setting.ini中设置
