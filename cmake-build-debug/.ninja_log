@@ -1,0 +1,9 @@
+# ninja log v5
+1813	2103	6945054968257298	libBmpCV.a	3e365eb274e704ee
+1	910	6945053762272092	CMakeFiles/BmpCV.dir/src/bmp.cpp.obj	86d3efe4d84e097d
+6	3803	6945059826186584	test/CMakeFiles/test.dir/test.cpp.obj	71242144a455aed7
+1	196	6945064742628697	build.ninja	eaadeb5878864fdd
+3804	4468	6945059832716596	test/test.exe	f4bf9f5d892a048f
+0	10	0	clean	6b30813bc0a2560
+8	1812	6945054965347293	CMakeFiles/BmpCV.dir/src/gui.cpp.obj	17c6468f45c163b2
+9	3185	6945053784962091	CMakeFiles/BmpCV.dir/src/img_proc.cpp.obj	9e66327c33a8b7a4

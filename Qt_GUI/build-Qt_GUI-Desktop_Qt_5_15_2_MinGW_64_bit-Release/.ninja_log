@@ -1,0 +1,23 @@
+# ninja log v5
+2	2471	6945057355421711	Qt_GUI_autogen/timestamp	34aacec92fbd5d45
+2471	2694	6945057363421735	Qt_GUI_autogen/EWIEGA46WW/qrc_resources.cpp	a19017eb65d9e07f
+2702	3232	6945057368701809	CMakeFiles/Qt_GUI.dir/Qt_GUI_autogen/EWIEGA46WW/qrc_resources.cpp.obj	6c59a485806e5185
+2706	8783	6945057424756890	CMakeFiles/Qt_GUI.dir/client.cpp.obj	a142bdc03c035ef8
+2698	9147	6945057428526898	CMakeFiles/Qt_GUI.dir/main.cpp.obj	c86cdccfd39c5910
+2694	9390	6945057430926863	CMakeFiles/Qt_GUI.dir/Qt_GUI_autogen/mocs_compilation.cpp.obj	ef60067c05733429
+2743	10251	6945057439586874	CMakeFiles/Qt_GUI.dir/mainwindow.cpp.obj	1d226b83bd489780
+10252	10718	6945057443096902	Qt_GUI.exe	a37bf6d86de5cb18
+0	28	0	CMakeFiles/clean.additional	9377104310d8a2a4
+28	39	0	clean	577b940aee94fbd7
+6	2026	6945060232677968	Qt_GUI_autogen/timestamp	34aacec92fbd5d45
+2026	2085	6945060235987977	Qt_GUI_autogen/EWIEGA46WW/qrc_resources.cpp	a19017eb65d9e07f
+2095	2212	6945060237277978	CMakeFiles/Qt_GUI.dir/Qt_GUI_autogen/EWIEGA46WW/qrc_resources.cpp.obj	6c59a485806e5185
+2091	6456	6945060279708963	CMakeFiles/Qt_GUI.dir/client.cpp.obj	a142bdc03c035ef8
+2086	6759	6945060282748942	CMakeFiles/Qt_GUI.dir/main.cpp.obj	c86cdccfd39c5910
+2088	6936	6945060284518947	CMakeFiles/Qt_GUI.dir/Qt_GUI_autogen/mocs_compilation.cpp.obj	ef60067c05733429
+2098	7396	6945060289108943	CMakeFiles/Qt_GUI.dir/mainwindow.cpp.obj	1d226b83bd489780
+7397	7865	6945060293378951	Qt_GUI.exe	a37bf6d86de5cb18
+6	379	6945061120590222	Qt_GUI_autogen/timestamp	34aacec92fbd5d45
+380	4469	6945061164078495	CMakeFiles/Qt_GUI.dir/Qt_GUI_autogen/mocs_compilation.cpp.obj	ef60067c05733429
+382	5063	6945061169998490	CMakeFiles/Qt_GUI.dir/mainwindow.cpp.obj	1d226b83bd489780
+5063	5269	6945061171988469	Qt_GUI.exe	a37bf6d86de5cb18

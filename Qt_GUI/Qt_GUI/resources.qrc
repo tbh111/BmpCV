@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>resources/Eyedropper.svg</file>
+        <file>resources/h_mirror.svg</file>
+        <file>resources/open.svg</file>
+        <file>resources/save.svg</file>
+        <file>resources/v_mirror.svg</file>
+        <file>resources/larger.svg</file>
+        <file>resources/smaller.svg</file>
+    </qresource>
+</RCC>
