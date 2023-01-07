@@ -1,6 +1,7 @@
 C:/Users/13087/Desktop/DIP/BmpCV/Qt_GUI/build-Qt_GUI-Desktop_Qt_5_15_2_MinGW_64_bit-Release/Qt_GUI_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/13087/Desktop/DIP/BmpCV/Qt_GUI/Qt_GUI/mainwindow.h \
   C:/Users/13087/Desktop/DIP/BmpCV/Qt_GUI/build-Qt_GUI-Desktop_Qt_5_15_2_MinGW_64_bit-Release/Qt_GUI_autogen/moc_predefs.h \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/QDebug \
+  C:/Qt/5.15.2/mingw81_64/include/QtCore/QMutex \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/QObject \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/QString \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/QThread \
@@ -42,6 +43,7 @@ C:/Users/13087/Desktop/DIP/BmpCV/Qt_GUI/build-Qt_GUI-Desktop_Qt_5_15_2_MinGW_64_
   C:/Qt/5.15.2/mingw81_64/include/QtCore/qmap.h \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/qmargins.h \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/qmetatype.h \
+  C:/Qt/5.15.2/mingw81_64/include/QtCore/qmutex.h \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/qnamespace.h \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/qnumeric.h \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/qobject.h \

@@ -15,6 +15,20 @@ namespace BmpCV {
         data = new uchar[pixel_count]();
     }
 
+    Img::Img(Eigen::MatrixXd matrix, int flag) {
+        width = matrix.cols();
+        height = matrix.rows();
+        color_bit = flag & 0x0f;
+        color_space = flag & 0xF0;
+        pixel_count = width * height * color_bit;
+        data = new uchar[pixel_count]();
+        for(int i=0; i<height; i++) {
+            for(int j=0; j<width; j++) {
+                this->iloc(i, j, 0) = matrix(i, j) * 256;
+            }
+        }
+    }
+
     Img::Img(const Img& im) {
         width = im.width;
         height = im.height;
@@ -28,7 +42,7 @@ namespace BmpCV {
 
     Img::~Img() {
         delete [] data;
-        std::cout << "Img deleted" << std::endl;
+//        std::cout << "Img deleted" << std::endl;
     }
 
     Img& Img::operator=(const Img &im) {
@@ -135,6 +149,7 @@ namespace BmpCV {
             int palette_count = 1<<bitmap.biBitCount;
             bool palette_flag = ((palette_count*4 + 14 + bitmap.biSize) == header.bfOffBits);
             if (src_img.color_bit == COLOR_8UC1 && palette_flag) {
+                std::cout << "indexed image" << std::endl;
                 Color_palette* cp = new Color_palette[palette_count]();
                 src_img.color_bit = COLOR_INDEXED;
                 if(header.bfOffBits >= (sizeof(header) + sizeof(bitmap))) {
@@ -171,6 +186,7 @@ namespace BmpCV {
                 src_img.data = new uchar[src_img.pixel_count];
                 for(int i=0; i<src_img.height; i++) {
                     // fseek(img_fd, header.bfOffBits+row_size*(src_img.height-1-i), SEEK_SET);
+                    // fread(static_cast<uchar*>(src_img.data + i*row_data), 1, row_data, img_fd);
                     fread(static_cast<uchar*>(src_img.data + (src_img.height-1-i)*row_data), 1, row_data, img_fd);
                     fseek(img_fd, row_size - row_data, SEEK_CUR);
                 }
@@ -195,7 +211,7 @@ namespace BmpCV {
             header.bfOffBits = 0x0436;
         }
         else {
-            header.bfSize = src_img.pixel_count + 0x0038;
+            header.bfSize = src_img.pixel_count + 0x0036;
             header.bfOffBits = 0x0036;
         }
 

@@ -6,7 +6,10 @@ set(CMAKE_CXX_STANDARD 11)
 add_library(BmpCV
         src/bmp.cpp
         src/gui.cpp
-        src/img_proc.cpp)
+        src/img_proc.cpp
+        src/transform.cpp
+        src/filter.cpp
+        src/img_proc_2.cpp)
 
 include_directories(${PROJECT_SOURCE_DIR}/Eigen)
 target_include_directories(BmpCV

@@ -9,11 +9,14 @@
 	[
 		"C:/Users/13087/Desktop/DIP/BmpCV/Qt_GUI/Qt_GUI/resources/Eyedropper.svg",
 		"C:/Users/13087/Desktop/DIP/BmpCV/Qt_GUI/Qt_GUI/resources/smaller.svg",
+		"C:/Users/13087/Desktop/DIP/BmpCV/Qt_GUI/Qt_GUI/resources/recall.svg",
 		"C:/Users/13087/Desktop/DIP/BmpCV/Qt_GUI/Qt_GUI/resources/save.svg",
 		"C:/Users/13087/Desktop/DIP/BmpCV/Qt_GUI/Qt_GUI/resources/h_mirror.svg",
 		"C:/Users/13087/Desktop/DIP/BmpCV/Qt_GUI/Qt_GUI/resources/open.svg",
 		"C:/Users/13087/Desktop/DIP/BmpCV/Qt_GUI/Qt_GUI/resources/larger.svg",
-		"C:/Users/13087/Desktop/DIP/BmpCV/Qt_GUI/Qt_GUI/resources/v_mirror.svg"
+		"C:/Users/13087/Desktop/DIP/BmpCV/Qt_GUI/Qt_GUI/resources/rotate.svg",
+		"C:/Users/13087/Desktop/DIP/BmpCV/Qt_GUI/Qt_GUI/resources/v_mirror.svg",
+		"C:/Users/13087/Desktop/DIP/BmpCV/Qt_GUI/Qt_GUI/resources/roi.svg"
 	],
 	"LOCK_FILE" : "C:/Users/13087/Desktop/DIP/BmpCV/Qt_GUI/build-Qt_GUI-Desktop_Qt_5_15_2_MinGW_64_bit-Release/CMakeFiles/Qt_GUI_autogen.dir/AutoRcc_resources_EWIEGA46WW_Lock.lock",
 	"MULTI_CONFIG" : false,

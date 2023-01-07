@@ -10,7 +10,8 @@ namespace BmpCV {
         MAP_CREATE_ERROR = 3,
         INDEX_OVERFLOW = 4,
         INDEX_EQZ = 5,
-        RATIO_EQZ = 6};
+        RATIO_EQZ = 6,
+        COLOR_ERROR = 7};
 
     class CV_runtime_error : public std::runtime_error {
     public:

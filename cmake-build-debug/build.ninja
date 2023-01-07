@@ -70,6 +70,27 @@ build CMakeFiles/BmpCV.dir/src/img_proc.cpp.obj: CXX_COMPILER__BmpCV_Debug C$:/U
   OBJECT_DIR = CMakeFiles\BmpCV.dir
   OBJECT_FILE_DIR = CMakeFiles\BmpCV.dir\src
 
+build CMakeFiles/BmpCV.dir/src/transform.cpp.obj: CXX_COMPILER__BmpCV_Debug C$:/Users/13087/Desktop/DIP/BmpCV/src/transform.cpp || cmake_object_order_depends_target_BmpCV
+  DEP_FILE = CMakeFiles\BmpCV.dir\src\transform.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++11
+  INCLUDES = -IC:/Users/13087/Desktop/DIP/BmpCV/Eigen -IC:/Users/13087/Desktop/DIP/BmpCV/include
+  OBJECT_DIR = CMakeFiles\BmpCV.dir
+  OBJECT_FILE_DIR = CMakeFiles\BmpCV.dir\src
+
+build CMakeFiles/BmpCV.dir/src/filter.cpp.obj: CXX_COMPILER__BmpCV_Debug C$:/Users/13087/Desktop/DIP/BmpCV/src/filter.cpp || cmake_object_order_depends_target_BmpCV
+  DEP_FILE = CMakeFiles\BmpCV.dir\src\filter.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++11
+  INCLUDES = -IC:/Users/13087/Desktop/DIP/BmpCV/Eigen -IC:/Users/13087/Desktop/DIP/BmpCV/include
+  OBJECT_DIR = CMakeFiles\BmpCV.dir
+  OBJECT_FILE_DIR = CMakeFiles\BmpCV.dir\src
+
+build CMakeFiles/BmpCV.dir/src/img_proc_2.cpp.obj: CXX_COMPILER__BmpCV_Debug C$:/Users/13087/Desktop/DIP/BmpCV/src/img_proc_2.cpp || cmake_object_order_depends_target_BmpCV
+  DEP_FILE = CMakeFiles\BmpCV.dir\src\img_proc_2.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++11
+  INCLUDES = -IC:/Users/13087/Desktop/DIP/BmpCV/Eigen -IC:/Users/13087/Desktop/DIP/BmpCV/include
+  OBJECT_DIR = CMakeFiles\BmpCV.dir
+  OBJECT_FILE_DIR = CMakeFiles\BmpCV.dir\src
+
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target BmpCV
@@ -78,7 +99,7 @@ build CMakeFiles/BmpCV.dir/src/img_proc.cpp.obj: CXX_COMPILER__BmpCV_Debug C$:/U
 #############################################
 # Link the static library libBmpCV.a
 
-build libBmpCV.a: CXX_STATIC_LIBRARY_LINKER__BmpCV_Debug CMakeFiles/BmpCV.dir/src/bmp.cpp.obj CMakeFiles/BmpCV.dir/src/gui.cpp.obj CMakeFiles/BmpCV.dir/src/img_proc.cpp.obj
+build libBmpCV.a: CXX_STATIC_LIBRARY_LINKER__BmpCV_Debug CMakeFiles/BmpCV.dir/src/bmp.cpp.obj CMakeFiles/BmpCV.dir/src/gui.cpp.obj CMakeFiles/BmpCV.dir/src/img_proc.cpp.obj CMakeFiles/BmpCV.dir/src/transform.cpp.obj CMakeFiles/BmpCV.dir/src/filter.cpp.obj CMakeFiles/BmpCV.dir/src/img_proc_2.cpp.obj
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = CMakeFiles\BmpCV.dir
   POST_BUILD = cd .

@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Client_t {
-    QByteArrayData data[12];
-    char stringdata0[102];
+    QByteArrayData data[13];
+    char stringdata0[106];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -43,12 +43,13 @@ QT_MOC_LITERAL(7, 57, 5), // "shape"
 QT_MOC_LITERAL(8, 63, 1), // "s"
 QT_MOC_LITERAL(9, 65, 20), // "client_debug_message"
 QT_MOC_LITERAL(10, 86, 3), // "msg"
-QT_MOC_LITERAL(11, 90, 11) // "updateQueue"
+QT_MOC_LITERAL(11, 90, 10), // "updateInst"
+QT_MOC_LITERAL(12, 101, 4) // "inst"
 
     },
     "Client\0client_message\0\0str\0client_array\0"
     "arr\0client_shape\0shape\0s\0client_debug_message\0"
-    "msg\0updateQueue"
+    "msg\0updateInst\0inst"
 };
 #undef QT_MOC_LITERAL
 
@@ -72,7 +73,7 @@ static const uint qt_meta_data_Client[] = {
        9,    1,   48,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-      11,    0,   51,    2, 0x0a /* Public */,
+      11,    1,   51,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QString,    3,
@@ -81,7 +82,7 @@ static const uint qt_meta_data_Client[] = {
     QMetaType::Void, QMetaType::QString,   10,
 
  // slots: parameters
-    QMetaType::Void,
+    QMetaType::Void, QMetaType::QByteArray,   12,
 
        0        // eod
 };
@@ -96,7 +97,7 @@ void Client::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         case 1: _t->client_array((*reinterpret_cast< QByteArray(*)>(_a[1]))); break;
         case 2: _t->client_shape((*reinterpret_cast< shape(*)>(_a[1]))); break;
         case 3: _t->client_debug_message((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 4: _t->updateQueue(); break;
+        case 4: _t->updateInst((*reinterpret_cast< QByteArray(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {

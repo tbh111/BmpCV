@@ -6,11 +6,14 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->horizontalSlider->setVisible(false);
+    ui->Roi_button->setVisible(false);
     c = new Client;
     qRegisterMetaType<shape>("shape");
     connect(c, SIGNAL(client_debug_message(QString)), this, SLOT(update_message(QString)));
     connect(c, SIGNAL(client_array(QByteArray)), this, SLOT(draw_img(QByteArray)));
     connect(c, SIGNAL(client_shape(shape)), this, SLOT(update_text(shape)));
+    connect(this, SIGNAL(button_inst(QByteArray)), c, SLOT(updateInst(QByteArray)));
     c->start();
 }
 
@@ -57,13 +60,24 @@ void MainWindow::mousePressEvent(QMouseEvent *e)
                                   " X: " + QString::number(pt_img.x()) +
                                   " Y: " + QString::number(pt_img.y()));
         }
-
     }
 }
 
 void MainWindow::closeEvent(QCloseEvent *e)
 {
-
+    QByteArray inst_arr;
+    inst_arr.resize(9);
+    inst_arr[0] = Client::CLOSE;
+    inst_arr[1] = 0x0;
+    inst_arr[2] = 0x0;
+    inst_arr[3] = 0x0;
+    inst_arr[4] = 0x0;
+    inst_arr[5] = 0x0;
+    inst_arr[6] = 0x0;
+    inst_arr[7] = 0x0;
+    inst_arr[8] = 0x0;
+    emit button_inst(inst_arr);
+    e->accept();
 }
 
 void MainWindow::update_message(QString message)
@@ -73,10 +87,24 @@ void MainWindow::update_message(QString message)
 
 void MainWindow::draw_img(QByteArray arr)
 {
-    ui->message_label->setText("done");
+
+    ui->message_label->setText("Status: done");
     long size = ui->line_size->text().toInt();
 //    QString str;
-    if(img_show->format() == QImage::Format_RGB888)
+    img_data_lock.lock();
+    if(img_exist)
+    {
+        delete [] data_temp;
+        delete img_show;
+    }
+    img_exist = true;
+    data_temp = new uchar[img_shape.size]();
+    if(img_shape.depth == 3)
+        img_show = new QImage(data_temp, img_shape.width, img_shape.height, img_shape.width*img_shape.depth, QImage::Format_RGB888);
+    else
+        img_show = new QImage(data_temp, img_shape.width, img_shape.height, img_shape.width*img_shape.depth, QImage::Format_Grayscale8);
+
+    if(img_shape.depth == 3)
     {
         for(int i=0; i<size; i=i+3)
         {
@@ -100,12 +128,13 @@ void MainWindow::draw_img(QByteArray arr)
     //        str.append(tr("0x%1,").arg((quint8)arr.at(i+1),2,16,QLatin1Char('0')));
     //        str.append(tr("0x%1,").arg((quint8)arr.at(i+2),2,16,QLatin1Char('0')));
     //        str.append("\n");
-
             img_show->bits()[i] = arr[i];
-
         }
     }
 
+    img_data_lock.unlock();
+    c->clear_packet_count();
+//    QPixmap pixmap = QPixmap::fromImage(*img_show);
     QPixmap pixmap = QPixmap::fromImage((*img_show).scaled(ui->label_image->size(), Qt::KeepAspectRatio));
     ui->label_image->setPixmap(pixmap);
 //    ui->debugEdit->setText(str);
@@ -113,15 +142,13 @@ void MainWindow::draw_img(QByteArray arr)
 
 void MainWindow::update_text(shape s)
 {
+    qDebug() << "update_text";
     ui->line_width->setText(QString::number(s.width));
     ui->line_height->setText(QString::number(s.height));
     ui->line_depth->setText(QString::number(s.depth));
     ui->line_size->setText(QString::number(s.size));
-    if(s.depth == 3)
-        img_show = new QImage(s.width, s.height, QImage::Format_RGB888);
-    else
-        img_show = new QImage(s.width, s.height, QImage::Format_Grayscale8);
-    img_exist = true;
+    img_shape = s;
+
 }
 
 void MainWindow::on_EyeDropper_button_clicked(bool checked)
@@ -136,5 +163,168 @@ void MainWindow::on_Save_button_clicked()
     {
         img_show->save(save_path);
     }
+}
+
+
+void MainWindow::on_horizontalSlider_valueChanged(int value)
+{
+    QByteArray inst_arr;
+    inst_arr.resize(9);
+    int32_t value_32 = static_cast<int32_t>(value);
+    inst_arr[0] = Client::ROTATE;
+    inst_arr[1] = value_32 & 0x000000FF;
+    inst_arr[2] = (value_32 & 0x0000FF00) >> 8;
+    inst_arr[3] = (value_32 & 0x00FF0000) >> 16;
+    inst_arr[4] = (value_32 & 0xFF000000) >> 24;
+    inst_arr[5] = 0x0;
+    inst_arr[6] = 0x0;
+    inst_arr[7] = 0x0;
+    inst_arr[8] = 0x0;
+    emit button_inst(inst_arr);
+    Sleep(200);
+}
+
+
+void MainWindow::on_Rotate_button_clicked(bool checked)
+{
+    if(checked)
+    {
+        ui->horizontalSlider->setVisible(true);
+    }
+    else
+    {
+        ui->horizontalSlider->setVisible(false);
+    }
+}
+
+
+void MainWindow::on_Flip_h_button_clicked()
+{
+    QByteArray inst_arr;
+    inst_arr.resize(9);
+    inst_arr[0] = Client::FLIP_H;
+    inst_arr[1] = 0x0;
+    inst_arr[2] = 0x0;
+    inst_arr[3] = 0x0;
+    inst_arr[4] = 0x0;
+    inst_arr[5] = 0x0;
+    inst_arr[6] = 0x0;
+    inst_arr[7] = 0x0;
+    inst_arr[8] = 0x0;
+    emit button_inst(inst_arr);
+}
+
+
+void MainWindow::on_Flip_v_button_clicked()
+{
+    QByteArray inst_arr;
+    inst_arr.resize(9);
+    inst_arr[0] = Client::FLIP_V;
+    inst_arr[1] = 0x0;
+    inst_arr[2] = 0x0;
+    inst_arr[3] = 0x0;
+    inst_arr[4] = 0x0;
+    inst_arr[5] = 0x0;
+    inst_arr[6] = 0x0;
+    inst_arr[7] = 0x0;
+    inst_arr[8] = 0x0;
+    emit button_inst(inst_arr);
+}
+
+
+void MainWindow::on_Larger_button_clicked()
+{
+    resize_ratio += 2;
+    if(resize_ratio == 50)
+    {
+        ui->Larger_button->setEnabled(false);
+    }
+    if(resize_ratio == 4)
+    {
+        ui->Smaller_button->setEnabled(true);
+    }
+    ui->message_label->setText("Status: " + QString::number(resize_ratio*10) + "%");
+    QByteArray inst_arr;
+    inst_arr.resize(9);
+    inst_arr[0] = Client::RESIZE;
+    inst_arr[1] = resize_ratio & 0x000000FF;
+    inst_arr[2] = 0x0;
+    inst_arr[3] = 0x0;
+    inst_arr[4] = 0x0;
+    inst_arr[5] = 0x0;
+    inst_arr[6] = 0x0;
+    inst_arr[7] = 0x0;
+    inst_arr[8] = 0x0;
+    emit button_inst(inst_arr);
+}
+
+
+void MainWindow::on_Smaller_button_clicked()
+{
+    resize_ratio -= 2;
+    if(resize_ratio == 2)
+    {
+        ui->Smaller_button->setEnabled(false);
+    }
+    if(resize_ratio == 48)
+    {
+        ui->Larger_button->setEnabled(true);
+    }
+    ui->message_label->setText("Status: " + QString::number(resize_ratio*10) + "%");
+    QByteArray inst_arr;
+    inst_arr.resize(9);
+    inst_arr[0] = Client::RESIZE;
+    inst_arr[1] = resize_ratio & 0x000000FF;
+    inst_arr[2] = 0x0;
+    inst_arr[3] = 0x0;
+    inst_arr[4] = 0x0;
+    inst_arr[5] = 0x0;
+    inst_arr[6] = 0x0;
+    inst_arr[7] = 0x0;
+    inst_arr[8] = 0x0;
+    emit button_inst(inst_arr);
+}
+
+
+void MainWindow::on_Roi_button_clicked(bool checked)
+{
+    // under development
+    roi_switch = checked;
+    if(roi_switch)
+    {
+        QByteArray inst_arr;
+        inst_arr.resize(9);
+        inst_arr[0] = Client::CUT;
+        inst_arr[1] = 0x0;
+        inst_arr[2] = 0x0;
+        inst_arr[3] = 0x0;
+        inst_arr[4] = 0x0;
+        inst_arr[5] = 0x0;
+        inst_arr[6] = 0x0;
+        inst_arr[7] = 0x0;
+        inst_arr[8] = 0x0;
+        emit button_inst(inst_arr);
+    }
+
+}
+
+void MainWindow::on_Recall_button_clicked()
+{
+    resize_ratio = 10;
+    ui->Larger_button->setEnabled(true);
+    ui->Smaller_button->setEnabled(true);
+    ui->horizontalSlider->setValue(180);
+    QByteArray inst_arr;
+    inst_arr.resize(9);
+    inst_arr[0] = Client::RECALL;
+    inst_arr[1] = 0x0;
+    inst_arr[2] = 0x0;
+    inst_arr[3] = 0x0;
+    inst_arr[4] = 0x0;
+    inst_arr[5] = 0x0;
+    inst_arr[6] = 0x0;
+    inst_arr[7] = 0x0;
+    inst_arr[8] = 0x0;
+    emit button_inst(inst_arr);
 }
 

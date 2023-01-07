@@ -42,10 +42,8 @@ public:
     QLabel *label_4;
     QLineEdit *line_size;
     QPushButton *EyeDropper_button;
-    QSlider *horizontalSlider;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
+    QPushButton *Flip_h_button;
+    QPushButton *Flip_v_button;
     QPushButton *Save_button;
     QTextEdit *debugEdit;
     QLineEdit *R_edit;
@@ -60,6 +58,11 @@ public:
     QLineEdit *Y_edit;
     QPushButton *Larger_button;
     QPushButton *Smaller_button;
+    QPushButton *Rotate_button;
+    QPushButton *Roi_button;
+    QSlider *horizontalSlider;
+    QLabel *Slide_label;
+    QPushButton *Recall_button;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -72,7 +75,7 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         message_label = new QLabel(centralwidget);
         message_label->setObjectName(QString::fromUtf8("message_label"));
-        message_label->setGeometry(QRect(660, 10, 121, 31));
+        message_label->setGeometry(QRect(760, 10, 121, 31));
         message_label->setFrameShape(QFrame::Panel);
         message_label->setFrameShadow(QFrame::Raised);
         count = new QLabel(centralwidget);
@@ -119,37 +122,26 @@ public:
         icon.addFile(QString::fromUtf8(":/new/prefix1/resources/Eyedropper.svg"), QSize(), QIcon::Normal, QIcon::On);
         EyeDropper_button->setIcon(icon);
         EyeDropper_button->setCheckable(true);
-        horizontalSlider = new QSlider(centralwidget);
-        horizontalSlider->setObjectName(QString::fromUtf8("horizontalSlider"));
-        horizontalSlider->setGeometry(QRect(360, 20, 160, 22));
-        horizontalSlider->setOrientation(Qt::Horizontal);
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(110, 10, 40, 40));
+        Flip_h_button = new QPushButton(centralwidget);
+        Flip_h_button->setObjectName(QString::fromUtf8("Flip_h_button"));
+        Flip_h_button->setGeometry(QRect(110, 10, 40, 40));
         QIcon icon1;
         icon1.addFile(QString::fromUtf8(":/new/prefix1/resources/h_mirror.svg"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton->setIcon(icon1);
-        pushButton->setIconSize(QSize(20, 20));
-        pushButton_2 = new QPushButton(centralwidget);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(160, 10, 40, 40));
+        Flip_h_button->setIcon(icon1);
+        Flip_h_button->setIconSize(QSize(20, 20));
+        Flip_v_button = new QPushButton(centralwidget);
+        Flip_v_button->setObjectName(QString::fromUtf8("Flip_v_button"));
+        Flip_v_button->setGeometry(QRect(160, 10, 40, 40));
         QIcon icon2;
         icon2.addFile(QString::fromUtf8(":/new/prefix1/resources/v_mirror.svg"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_2->setIcon(icon2);
-        pushButton_2->setIconSize(QSize(20, 20));
-        pushButton_3 = new QPushButton(centralwidget);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setGeometry(QRect(10, 10, 40, 40));
-        QIcon icon3;
-        icon3.addFile(QString::fromUtf8(":/new/prefix1/resources/open.svg"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_3->setIcon(icon3);
-        pushButton_3->setIconSize(QSize(20, 20));
+        Flip_v_button->setIcon(icon2);
+        Flip_v_button->setIconSize(QSize(20, 20));
         Save_button = new QPushButton(centralwidget);
         Save_button->setObjectName(QString::fromUtf8("Save_button"));
-        Save_button->setGeometry(QRect(60, 10, 40, 40));
-        QIcon icon4;
-        icon4.addFile(QString::fromUtf8(":/new/prefix1/resources/save.svg"), QSize(), QIcon::Normal, QIcon::Off);
-        Save_button->setIcon(icon4);
+        Save_button->setGeometry(QRect(10, 10, 40, 40));
+        QIcon icon3;
+        icon3.addFile(QString::fromUtf8(":/new/prefix1/resources/save.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        Save_button->setIcon(icon3);
         Save_button->setIconSize(QSize(20, 20));
         debugEdit = new QTextEdit(centralwidget);
         debugEdit->setObjectName(QString::fromUtf8("debugEdit"));
@@ -187,19 +179,53 @@ public:
         Larger_button = new QPushButton(centralwidget);
         Larger_button->setObjectName(QString::fromUtf8("Larger_button"));
         Larger_button->setGeometry(QRect(260, 10, 40, 40));
-        QIcon icon5;
-        icon5.addFile(QString::fromUtf8(":/new/prefix1/resources/larger.svg"), QSize(), QIcon::Normal, QIcon::Off);
-        icon5.addFile(QString::fromUtf8(":/new/prefix1/resources/Eyedropper.svg"), QSize(), QIcon::Normal, QIcon::On);
-        Larger_button->setIcon(icon5);
-        Larger_button->setCheckable(true);
+        QIcon icon4;
+        icon4.addFile(QString::fromUtf8(":/new/prefix1/resources/larger.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        icon4.addFile(QString::fromUtf8(":/new/prefix1/resources/Eyedropper.svg"), QSize(), QIcon::Normal, QIcon::On);
+        Larger_button->setIcon(icon4);
+        Larger_button->setCheckable(false);
         Smaller_button = new QPushButton(centralwidget);
         Smaller_button->setObjectName(QString::fromUtf8("Smaller_button"));
         Smaller_button->setGeometry(QRect(310, 10, 40, 40));
+        QIcon icon5;
+        icon5.addFile(QString::fromUtf8(":/new/prefix1/resources/smaller.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        icon5.addFile(QString::fromUtf8(":/new/prefix1/resources/Eyedropper.svg"), QSize(), QIcon::Normal, QIcon::On);
+        Smaller_button->setIcon(icon5);
+        Smaller_button->setCheckable(false);
+        Rotate_button = new QPushButton(centralwidget);
+        Rotate_button->setObjectName(QString::fromUtf8("Rotate_button"));
+        Rotate_button->setGeometry(QRect(360, 10, 40, 40));
         QIcon icon6;
-        icon6.addFile(QString::fromUtf8(":/new/prefix1/resources/smaller.svg"), QSize(), QIcon::Normal, QIcon::Off);
-        icon6.addFile(QString::fromUtf8(":/new/prefix1/resources/Eyedropper.svg"), QSize(), QIcon::Normal, QIcon::On);
-        Smaller_button->setIcon(icon6);
-        Smaller_button->setCheckable(true);
+        icon6.addFile(QString::fromUtf8(":/new/prefix1/resources/rotate.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        Rotate_button->setIcon(icon6);
+        Rotate_button->setIconSize(QSize(22, 22));
+        Rotate_button->setCheckable(true);
+        Roi_button = new QPushButton(centralwidget);
+        Roi_button->setObjectName(QString::fromUtf8("Roi_button"));
+        Roi_button->setGeometry(QRect(410, 10, 40, 40));
+        QIcon icon7;
+        icon7.addFile(QString::fromUtf8(":/new/prefix1/resources/roi.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        Roi_button->setIcon(icon7);
+        Roi_button->setIconSize(QSize(18, 18));
+        Roi_button->setCheckable(true);
+        horizontalSlider = new QSlider(centralwidget);
+        horizontalSlider->setObjectName(QString::fromUtf8("horizontalSlider"));
+        horizontalSlider->setEnabled(true);
+        horizontalSlider->setGeometry(QRect(480, 20, 160, 22));
+        horizontalSlider->setMinimum(0);
+        horizontalSlider->setMaximum(360);
+        horizontalSlider->setValue(180);
+        horizontalSlider->setOrientation(Qt::Horizontal);
+        Slide_label = new QLabel(centralwidget);
+        Slide_label->setObjectName(QString::fromUtf8("Slide_label"));
+        Slide_label->setGeometry(QRect(600, 20, 53, 16));
+        Recall_button = new QPushButton(centralwidget);
+        Recall_button->setObjectName(QString::fromUtf8("Recall_button"));
+        Recall_button->setGeometry(QRect(60, 10, 40, 40));
+        QIcon icon8;
+        icon8.addFile(QString::fromUtf8(":/new/prefix1/resources/recall.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        Recall_button->setIcon(icon8);
+        Recall_button->setIconSize(QSize(20, 20));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -218,30 +244,38 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
 #if QT_CONFIG(whatsthis)
-        MainWindow->setWhatsThis(QCoreApplication::translate("MainWindow", "\345\220\270\347\256\241", nullptr));
+        MainWindow->setWhatsThis(QString());
 #endif // QT_CONFIG(whatsthis)
-        message_label->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        message_label->setText(QCoreApplication::translate("MainWindow", "Status: IDLE", nullptr));
         count->setText(QString());
         label_image->setText(QString());
         label->setText(QCoreApplication::translate("MainWindow", "width", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "height", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "depth", nullptr));
         label_4->setText(QCoreApplication::translate("MainWindow", "size", nullptr));
+#if QT_CONFIG(tooltip)
+        EyeDropper_button->setToolTip(QCoreApplication::translate("MainWindow", "\345\217\226\350\211\262\345\231\250", nullptr));
+#endif // QT_CONFIG(tooltip)
         EyeDropper_button->setText(QString());
+#if QT_CONFIG(tooltip)
+        Flip_h_button->setToolTip(QCoreApplication::translate("MainWindow", "\346\260\264\345\271\263\351\225\234\345\203\217", nullptr));
+#endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(whatsthis)
-        pushButton->setWhatsThis(QCoreApplication::translate("MainWindow", "\346\260\264\345\271\263\351\225\234\345\203\217", nullptr));
+        Flip_h_button->setWhatsThis(QString());
 #endif // QT_CONFIG(whatsthis)
-        pushButton->setText(QString());
+        Flip_h_button->setText(QString());
+#if QT_CONFIG(tooltip)
+        Flip_v_button->setToolTip(QCoreApplication::translate("MainWindow", "\345\236\202\347\233\264\351\225\234\345\203\217", nullptr));
+#endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(whatsthis)
-        pushButton_2->setWhatsThis(QCoreApplication::translate("MainWindow", "\346\260\264\345\271\263\351\225\234\345\203\217", nullptr));
+        Flip_v_button->setWhatsThis(QString());
 #endif // QT_CONFIG(whatsthis)
-        pushButton_2->setText(QString());
+        Flip_v_button->setText(QString());
+#if QT_CONFIG(tooltip)
+        Save_button->setToolTip(QCoreApplication::translate("MainWindow", "\344\277\235\345\255\230", nullptr));
+#endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(whatsthis)
-        pushButton_3->setWhatsThis(QCoreApplication::translate("MainWindow", "\346\260\264\345\271\263\351\225\234\345\203\217", nullptr));
-#endif // QT_CONFIG(whatsthis)
-        pushButton_3->setText(QString());
-#if QT_CONFIG(whatsthis)
-        Save_button->setWhatsThis(QCoreApplication::translate("MainWindow", "\346\260\264\345\271\263\351\225\234\345\203\217", nullptr));
+        Save_button->setWhatsThis(QString());
 #endif // QT_CONFIG(whatsthis)
         Save_button->setText(QString());
         label_6->setText(QCoreApplication::translate("MainWindow", "G", nullptr));
@@ -249,8 +283,30 @@ public:
         label_5->setText(QCoreApplication::translate("MainWindow", "R", nullptr));
         label_9->setText(QCoreApplication::translate("MainWindow", "X", nullptr));
         label_10->setText(QCoreApplication::translate("MainWindow", "Y", nullptr));
+#if QT_CONFIG(tooltip)
+        Larger_button->setToolTip(QCoreApplication::translate("MainWindow", "\346\224\276\345\244\247", nullptr));
+#endif // QT_CONFIG(tooltip)
         Larger_button->setText(QString());
+#if QT_CONFIG(tooltip)
+        Smaller_button->setToolTip(QCoreApplication::translate("MainWindow", "\347\274\251\345\260\217", nullptr));
+#endif // QT_CONFIG(tooltip)
         Smaller_button->setText(QString());
+#if QT_CONFIG(tooltip)
+        Rotate_button->setToolTip(QCoreApplication::translate("MainWindow", "\346\227\213\350\275\254", nullptr));
+#endif // QT_CONFIG(tooltip)
+        Rotate_button->setText(QString());
+#if QT_CONFIG(tooltip)
+        Roi_button->setToolTip(QCoreApplication::translate("MainWindow", "\350\243\201\345\211\252", nullptr));
+#endif // QT_CONFIG(tooltip)
+        Roi_button->setText(QString());
+        Slide_label->setText(QString());
+#if QT_CONFIG(tooltip)
+        Recall_button->setToolTip(QCoreApplication::translate("MainWindow", "\346\201\242\345\244\215\345\216\237\345\233\276", nullptr));
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        Recall_button->setWhatsThis(QString());
+#endif // QT_CONFIG(whatsthis)
+        Recall_button->setText(QString());
     } // retranslateUi
 
 };

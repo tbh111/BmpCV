@@ -14,13 +14,13 @@
    <string>MainWindow</string>
   </property>
   <property name="whatsThis">
-   <string>吸管</string>
+   <string/>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="message_label">
     <property name="geometry">
      <rect>
-      <x>660</x>
+      <x>760</x>
       <y>10</y>
       <width>121</width>
       <height>31</height>
@@ -33,7 +33,7 @@
      <enum>QFrame::Raised</enum>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>Status: IDLE</string>
     </property>
    </widget>
    <widget class="QLabel" name="count">
@@ -114,6 +114,9 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="toolTip">
+     <string>取色器</string>
+    </property>
     <property name="text">
      <string/>
     </property>
@@ -126,20 +129,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QSlider" name="horizontalSlider">
-    <property name="geometry">
-     <rect>
-      <x>360</x>
-      <y>20</y>
-      <width>160</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="Flip_h_button">
     <property name="geometry">
      <rect>
       <x>110</x>
@@ -148,8 +138,11 @@
       <height>40</height>
      </rect>
     </property>
-    <property name="whatsThis">
+    <property name="toolTip">
      <string>水平镜像</string>
+    </property>
+    <property name="whatsThis">
+     <string/>
     </property>
     <property name="text">
      <string/>
@@ -165,7 +158,7 @@
      </size>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="Flip_v_button">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -174,8 +167,11 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="toolTip">
+     <string>垂直镜像</string>
+    </property>
     <property name="whatsThis">
-     <string>水平镜像</string>
+     <string/>
     </property>
     <property name="text">
      <string/>
@@ -191,7 +187,7 @@
      </size>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="Save_button">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -200,34 +196,11 @@
       <height>40</height>
      </rect>
     </property>
-    <property name="whatsThis">
-     <string>水平镜像</string>
+    <property name="toolTip">
+     <string>保存</string>
     </property>
-    <property name="text">
+    <property name="whatsThis">
      <string/>
-    </property>
-    <property name="icon">
-     <iconset resource="resources.qrc">
-      <normaloff>:/new/prefix1/resources/open.svg</normaloff>:/new/prefix1/resources/open.svg</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>20</width>
-      <height>20</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="Save_button">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>10</y>
-      <width>40</width>
-      <height>40</height>
-     </rect>
-    </property>
-    <property name="whatsThis">
-     <string>水平镜像</string>
     </property>
     <property name="text">
      <string/>
@@ -377,6 +350,9 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="toolTip">
+     <string>放大</string>
+    </property>
     <property name="text">
      <string/>
     </property>
@@ -386,7 +362,7 @@
       <normalon>:/new/prefix1/resources/Eyedropper.svg</normalon>:/new/prefix1/resources/larger.svg</iconset>
     </property>
     <property name="checkable">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QPushButton" name="Smaller_button">
@@ -398,6 +374,9 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="toolTip">
+     <string>缩小</string>
+    </property>
     <property name="text">
      <string/>
     </property>
@@ -407,7 +386,132 @@
       <normalon>:/new/prefix1/resources/Eyedropper.svg</normalon>:/new/prefix1/resources/smaller.svg</iconset>
     </property>
     <property name="checkable">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Rotate_button">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>10</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>旋转</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="resources.qrc">
+      <normaloff>:/new/prefix1/resources/rotate.svg</normaloff>:/new/prefix1/resources/rotate.svg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>22</width>
+      <height>22</height>
+     </size>
+    </property>
+    <property name="checkable">
      <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Roi_button">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>10</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>裁剪</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="resources.qrc">
+      <normaloff>:/new/prefix1/resources/roi.svg</normaloff>:/new/prefix1/resources/roi.svg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>18</width>
+      <height>18</height>
+     </size>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QSlider" name="horizontalSlider">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>20</y>
+      <width>160</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>360</number>
+    </property>
+    <property name="value">
+     <number>180</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Slide_label">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>20</y>
+      <width>53</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Recall_button">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>10</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>恢复原图</string>
+    </property>
+    <property name="whatsThis">
+     <string/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="resources.qrc">
+      <normaloff>:/new/prefix1/resources/recall.svg</normaloff>:/new/prefix1/resources/recall.svg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>20</height>
+     </size>
     </property>
    </widget>
   </widget>

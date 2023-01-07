@@ -6,6 +6,7 @@
 #include <QDebug>
 #include <QString>
 #include <QVector>
+#include <QMutex>
 #include <windows.h>
 #include <tlhelp32.h>
 
@@ -16,8 +17,9 @@ class Client : public QThread
     Q_OBJECT
 public:
     explicit Client(QObject *parent = nullptr);
-    QVector<QString> request_queue;
     volatile bool running_flag = false;
+    enum OP_CODE{FLIP_V = 0x01, FLIP_H = 0x02, RESIZE = 0x03, ROTATE = 0x04, CUT = 0x05, RECALL = 0x06, CLOSE = 0x09};
+    void clear_packet_count();
 protected:
     void run();
 signals:
@@ -26,7 +28,7 @@ signals:
     void client_shape(shape s);
     void client_debug_message(QString msg);
 public slots:
-    void updateQueue();
+    void updateInst(QByteArray inst);
 private:
     HANDLE write_pipe;
     HANDLE read_pipe;
@@ -37,7 +39,8 @@ private:
     void closePipe();
     QByteArray img_arr;
     int packet_count = 0;
-
+    int byte_read = 0;
+    QMutex data_lock;
     shape img_shape;
 };
 

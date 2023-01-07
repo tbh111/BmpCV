@@ -264,15 +264,15 @@ namespace BmpCV {
         for(int i=0; i<dst_img.height; i++) { // per row: y
             for(int j=0; j<dst_img.width; j++) { // per col: x
                 Eigen::MatrixXd pixel_origin_pos(3, 1), pixel_pos(3, 1);
-                pixel_origin_pos << i, j, 1;
+                pixel_origin_pos << j, i, 1;
                 pixel_pos = trans_mat * pixel_origin_pos;
                 int pixel_pos_x = pixel_pos(0, 0);
                 int pixel_pos_y = pixel_pos(1, 0);
                 if(pixel_pos_x > 0 && pixel_pos_x < dst_img.width && pixel_pos_y > 0 && pixel_pos_y < dst_img.height) {
-                    dst_img.iloc(i, j, 0) = src_img.loc(pixel_pos_x, pixel_pos_y, 0);
+                    dst_img.iloc(i, j, 0) = src_img.loc(pixel_pos_y, pixel_pos_x, 0);
                     if(dst_img.color_bit == COLOR_8UC3) {
-                        dst_img.iloc(i, j, 1) = src_img.loc(pixel_pos_x, pixel_pos_y, 1);
-                        dst_img.iloc(i, j, 2) = src_img.loc(pixel_pos_x, pixel_pos_y, 2);
+                        dst_img.iloc(i, j, 1) = src_img.loc(pixel_pos_y, pixel_pos_x, 1);
+                        dst_img.iloc(i, j, 2) = src_img.loc(pixel_pos_y, pixel_pos_x, 2);
                     }
                 }
                 else {
@@ -288,6 +288,8 @@ namespace BmpCV {
     }
 
     Img removeColor(const Img& src_img) {
+        if(src_img.color_bit == COLOR_8UC1)
+            return src_img;
         Img dst_img(src_img.width, src_img.height, COLOR_8UC1|COLOR_GRAY);
         for(int i=0; i<dst_img.height; i++) { // per row: y
             for(int j=0; j<dst_img.width; j++) { // per col: x

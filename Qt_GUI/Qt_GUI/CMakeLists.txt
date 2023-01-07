@@ -47,6 +47,7 @@ endif()
 
 target_link_libraries(Qt_GUI PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 
+
 set_target_properties(Qt_GUI PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}

@@ -6,6 +6,7 @@
 #include <cstring>
 #include <cmath>
 #include <unordered_map>
+#include <Eigen>
 #include "error.h"
 
 static const int READ_STEP = 4;
@@ -74,6 +75,7 @@ namespace BmpCV {
 
         Img();
         Img(int cols, int rows, int flag);
+        Img(Eigen::MatrixXd matrix, int flag);
         Img(const Img& im);
         ~Img();
         Img& operator=(const Img& im);

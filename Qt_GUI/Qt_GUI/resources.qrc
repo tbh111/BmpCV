@@ -7,5 +7,8 @@
         <file>resources/v_mirror.svg</file>
         <file>resources/larger.svg</file>
         <file>resources/smaller.svg</file>
+        <file>resources/rotate.svg</file>
+        <file>resources/roi.svg</file>
+        <file>resources/recall.svg</file>
     </qresource>
 </RCC>

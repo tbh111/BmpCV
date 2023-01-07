@@ -4,6 +4,7 @@ C:/Users/13087/Desktop/DIP/BmpCV/Qt_GUI/Qt_GUI/client.h
  mdp:C:/Users/13087/Desktop/DIP/BmpCV/Qt_GUI/Qt_GUI/client.h
  mdp:C:/Users/13087/Desktop/DIP/BmpCV/Qt_GUI/build-Qt_GUI-Desktop_Qt_5_15_2_MinGW_64_bit-Release/Qt_GUI_autogen/moc_predefs.h
  mdp:C:/Qt/5.15.2/mingw81_64/include/QtCore/QDebug
+ mdp:C:/Qt/5.15.2/mingw81_64/include/QtCore/QMutex
  mdp:C:/Qt/5.15.2/mingw81_64/include/QtCore/QObject
  mdp:C:/Qt/5.15.2/mingw81_64/include/QtCore/QString
  mdp:C:/Qt/5.15.2/mingw81_64/include/QtCore/QThread
@@ -37,6 +38,7 @@ C:/Users/13087/Desktop/DIP/BmpCV/Qt_GUI/Qt_GUI/client.h
  mdp:C:/Qt/5.15.2/mingw81_64/include/QtCore/qlogging.h
  mdp:C:/Qt/5.15.2/mingw81_64/include/QtCore/qmap.h
  mdp:C:/Qt/5.15.2/mingw81_64/include/QtCore/qmetatype.h
+ mdp:C:/Qt/5.15.2/mingw81_64/include/QtCore/qmutex.h
  mdp:C:/Qt/5.15.2/mingw81_64/include/QtCore/qnamespace.h
  mdp:C:/Qt/5.15.2/mingw81_64/include/QtCore/qnumeric.h
  mdp:C:/Qt/5.15.2/mingw81_64/include/QtCore/qobject.h
@@ -449,6 +451,7 @@ C:/Users/13087/Desktop/DIP/BmpCV/Qt_GUI/Qt_GUI/mainwindow.h
  mdp:C:/Users/13087/Desktop/DIP/BmpCV/Qt_GUI/Qt_GUI/mainwindow.h
  mdp:C:/Users/13087/Desktop/DIP/BmpCV/Qt_GUI/build-Qt_GUI-Desktop_Qt_5_15_2_MinGW_64_bit-Release/Qt_GUI_autogen/moc_predefs.h
  mdp:C:/Qt/5.15.2/mingw81_64/include/QtCore/QDebug
+ mdp:C:/Qt/5.15.2/mingw81_64/include/QtCore/QMutex
  mdp:C:/Qt/5.15.2/mingw81_64/include/QtCore/QObject
  mdp:C:/Qt/5.15.2/mingw81_64/include/QtCore/QString
  mdp:C:/Qt/5.15.2/mingw81_64/include/QtCore/QThread
@@ -490,6 +493,7 @@ C:/Users/13087/Desktop/DIP/BmpCV/Qt_GUI/Qt_GUI/mainwindow.h
  mdp:C:/Qt/5.15.2/mingw81_64/include/QtCore/qmap.h
  mdp:C:/Qt/5.15.2/mingw81_64/include/QtCore/qmargins.h
  mdp:C:/Qt/5.15.2/mingw81_64/include/QtCore/qmetatype.h
+ mdp:C:/Qt/5.15.2/mingw81_64/include/QtCore/qmutex.h
  mdp:C:/Qt/5.15.2/mingw81_64/include/QtCore/qnamespace.h
  mdp:C:/Qt/5.15.2/mingw81_64/include/QtCore/qnumeric.h
  mdp:C:/Qt/5.15.2/mingw81_64/include/QtCore/qobject.h
@@ -944,6 +948,6 @@ C:/Users/13087/Desktop/DIP/BmpCV/Qt_GUI/Qt_GUI/mainwindow.h
  mdp:C:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/wtypesbase.h
  mdp:C:/Users/13087/Desktop/DIP/BmpCV/Qt_GUI/Qt_GUI/client.h
 C:/Users/13087/Desktop/DIP/BmpCV/Qt_GUI/Qt_GUI/client.cpp
-C:/Users/13087/Desktop/DIP/BmpCV/Qt_GUI/Qt_GUI/main.cpp
 C:/Users/13087/Desktop/DIP/BmpCV/Qt_GUI/Qt_GUI/mainwindow.cpp
  uic:./ui_mainwindow.h
+C:/Users/13087/Desktop/DIP/BmpCV/Qt_GUI/Qt_GUI/main.cpp

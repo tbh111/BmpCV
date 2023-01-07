@@ -4,19 +4,21 @@
 #include <windows.h>
 #include <tchar.h>
 #include <direct.h>
+#include <tlhelp32.h>
 #include "bmp.h"
+#include "img_proc.h"
 typedef unsigned char uchar;
 
 namespace BmpCV {
 
     void pipeInit();
     bool processSpawn();
-    void setMemoryMap();
     bool dataSend(uchar* data, long length);
     void createWindow();
     void imgShow(const Img& src_img);
-    // static DWORD WINAPI pipe_thread(LPVOID lp);
+    void processGUI(const Img& src_img);
 
 } // TbhCV
-
+    static bool detectProcess();
+    static bool process_running_flag = true;
 #endif //BMPCV_GUI_H
