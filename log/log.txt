@@ -1467,3 +1467,246 @@
 [2023-01-07 14:51:28 周六][Debug] File: Line:0  start process thread
 [2023-01-07 14:51:29 周六][Debug] File: Line:0  update_text
 [2023-01-07 14:51:30 周六][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-07 17:20:03 周六][Debug] File: Line:0  GUI start
+[2023-01-07 17:20:03 周六][Debug] File: Line:0  start process thread
+[2023-01-07 17:20:03 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:20:22 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:20:22 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:20:23 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:20:24 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:20:25 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:20:26 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:20:27 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:20:28 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:20:29 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:20:30 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:20:31 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:20:32 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:20:33 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:20:34 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:20:35 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:20:36 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:20:36 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:20:39 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:20:39 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:20:56 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:20:57 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:20:58 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:20:59 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:20:59 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:21:00 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:21:01 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:21:02 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:21:04 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:21:04 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:21:05 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:21:06 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:21:07 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:21:08 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:21:08 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:21:09 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:21:10 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:21:11 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:21:12 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:21:13 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:21:14 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:21:15 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:21:16 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:21:17 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:21:18 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:21:19 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:21:20 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:21:21 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:21:22 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:21:22 周六][Debug] File: Line:0  update_text
+[2023-01-07 17:21:35 周六][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-07 19:53:14 周六][Debug] File: Line:0  GUI start
+[2023-01-07 19:53:14 周六][Debug] File: Line:0  start process thread
+[2023-01-07 19:53:16 周六][Debug] File: Line:0  update_text
+[2023-01-07 19:53:25 周六][Debug] File: Line:0  update_text
+[2023-01-07 19:53:27 周六][Debug] File: Line:0  update_text
+[2023-01-07 19:53:27 周六][Debug] File: Line:0  update_text
+[2023-01-07 19:53:28 周六][Debug] File: Line:0  update_text
+[2023-01-07 19:53:29 周六][Debug] File: Line:0  update_text
+[2023-01-07 19:53:30 周六][Debug] File: Line:0  update_text
+[2023-01-07 19:53:30 周六][Debug] File: Line:0  update_text
+[2023-01-07 19:53:31 周六][Debug] File: Line:0  update_text
+[2023-01-07 19:53:31 周六][Debug] File: Line:0  update_text
+[2023-01-07 19:53:32 周六][Debug] File: Line:0  true
+[2023-01-07 19:53:40 周六][Debug] File: Line:0  false
+[2023-01-07 19:53:43 周六][Debug] File: Line:0  update_text
+[2023-01-07 19:53:45 周六][Debug] File: Line:0  update_text
+[2023-01-07 19:53:47 周六][Debug] File: Line:0  update_text
+[2023-01-07 19:53:49 周六][Debug] File: Line:0  update_text
+[2023-01-07 19:53:51 周六][Debug] File: Line:0  update_text
+[2023-01-07 19:53:53 周六][Debug] File: Line:0  update_text
+[2023-01-07 19:53:54 周六][Debug] File: Line:0  update_text
+[2023-01-07 19:53:56 周六][Debug] File: Line:0  update_text
+[2023-01-07 19:53:56 周六][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-09 19:39:00 周一][Debug] File: Line:0  GUI start
+[2023-01-09 19:39:01 周一][Debug] File: Line:0  start process thread
+[2023-01-09 19:39:01 周一][Debug] File: Line:0  update_text
+[2023-01-09 19:39:15 周一][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-09 19:39:27 周一][Debug] File: Line:0  GUI start
+[2023-01-09 19:39:27 周一][Debug] File: Line:0  start process thread
+[2023-01-09 19:39:28 周一][Debug] File: Line:0  update_text
+[2023-01-09 19:39:32 周一][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-09 21:54:06 周一][Debug] File: Line:0  GUI start
+[2023-01-09 21:54:07 周一][Debug] File: Line:0  start process thread
+[2023-01-09 21:54:07 周一][Debug] File: Line:0  update_text
+[2023-01-09 21:55:47 周一][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-09 21:57:09 周一][Debug] File: Line:0  GUI start
+[2023-01-09 21:57:09 周一][Debug] File: Line:0  start process thread
+[2023-01-09 21:57:09 周一][Debug] File: Line:0  update_text
+[2023-01-09 21:57:18 周一][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-09 22:25:36 周一][Debug] File: Line:0  GUI start
+[2023-01-09 22:25:36 周一][Debug] File: Line:0  start process thread
+[2023-01-09 22:25:38 周一][Debug] File: Line:0  update_text
+[2023-01-09 22:25:41 周一][Debug] File: Line:0  update_text
+[2023-01-09 22:25:42 周一][Debug] File: Line:0  update_text
+[2023-01-09 22:25:43 周一][Debug] File: Line:0  true
+[2023-01-09 22:25:56 周一][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-09 23:11:37 周一][Debug] File: Line:0  GUI start
+[2023-01-09 23:11:37 周一][Debug] File: Line:0  start process thread
+[2023-01-09 23:11:38 周一][Debug] File: Line:0  update_text
+[2023-01-09 23:11:47 周一][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-09 23:12:15 周一][Debug] File: Line:0  GUI start
+[2023-01-09 23:12:15 周一][Debug] File: Line:0  start process thread
+[2023-01-09 23:12:16 周一][Debug] File: Line:0  update_text
+[2023-01-09 23:12:19 周一][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-09 23:13:04 周一][Debug] File: Line:0  GUI start
+[2023-01-09 23:13:05 周一][Debug] File: Line:0  start process thread
+[2023-01-09 23:13:05 周一][Debug] File: Line:0  update_text
+[2023-01-09 23:13:15 周一][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-09 23:13:30 周一][Debug] File: Line:0  GUI start
+[2023-01-09 23:13:30 周一][Debug] File: Line:0  start process thread
+[2023-01-09 23:13:31 周一][Debug] File: Line:0  update_text
+[2023-01-09 23:13:34 周一][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-09 23:15:21 周一][Debug] File: Line:0  GUI start
+[2023-01-09 23:15:21 周一][Debug] File: Line:0  start process thread
+[2023-01-09 23:15:22 周一][Debug] File: Line:0  update_text
+[2023-01-09 23:15:41 周一][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-09 23:34:54 周一][Debug] File: Line:0  GUI start
+[2023-01-09 23:34:54 周一][Debug] File: Line:0  start process thread
+[2023-01-09 23:34:55 周一][Debug] File: Line:0  update_text
+[2023-01-09 23:34:59 周一][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-09 23:36:45 周一][Debug] File: Line:0  GUI start
+[2023-01-09 23:36:46 周一][Debug] File: Line:0  start process thread
+[2023-01-09 23:36:47 周一][Debug] File: Line:0  update_text
+[2023-01-09 23:36:54 周一][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-09 23:42:32 周一][Debug] File: Line:0  GUI start
+[2023-01-09 23:42:32 周一][Debug] File: Line:0  start process thread
+[2023-01-09 23:42:33 周一][Debug] File: Line:0  update_text
+[2023-01-09 23:42:37 周一][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-10 20:31:49 周二][Debug] File: Line:0  GUI start
+[2023-01-10 20:31:49 周二][Debug] File: Line:0  start process thread
+[2023-01-10 20:31:50 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:31:56 周二][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-10 20:37:15 周二][Debug] File: Line:0  GUI start
+[2023-01-10 20:37:15 周二][Debug] File: Line:0  start process thread
+[2023-01-10 20:37:16 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:37:21 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:37:21 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:37:21 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:37:21 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:37:22 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:37:22 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:37:22 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:37:22 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:37:22 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:37:22 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:37:23 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:37:23 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:37:23 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:37:23 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:37:23 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:37:24 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:37:24 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:37:24 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:37:24 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:37:24 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:37:24 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:37:25 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:37:25 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:37:25 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:37:26 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:37:26 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:37:26 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:37:26 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:37:33 周二][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-10 20:39:13 周二][Debug] File: Line:0  GUI start
+[2023-01-10 20:39:14 周二][Debug] File: Line:0  start process thread
+[2023-01-10 20:39:15 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:39:21 周二][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-10 20:42:16 周二][Debug] File: Line:0  GUI start
+[2023-01-10 20:42:16 周二][Debug] File: Line:0  start process thread
+[2023-01-10 20:42:17 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:42:23 周二][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-10 20:44:01 周二][Debug] File: Line:0  GUI start
+[2023-01-10 20:44:01 周二][Debug] File: Line:0  start process thread
+[2023-01-10 20:44:02 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:56:17 周二][Debug] File: Line:0  GUI start
+[2023-01-10 20:56:17 周二][Debug] File: Line:0  start process thread
+[2023-01-10 20:56:18 周二][Debug] File: Line:0  update_text
+[2023-01-10 20:56:24 周二][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-10 21:15:47 周二][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-10 21:35:09 周二][Debug] File: Line:0  GUI start
+[2023-01-10 21:35:09 周二][Debug] File: Line:0  start process thread
+[2023-01-10 21:35:10 周二][Debug] File: Line:0  update_text
+[2023-01-10 21:35:24 周二][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-10 21:36:28 周二][Debug] File: Line:0  GUI start
+[2023-01-10 21:36:28 周二][Debug] File: Line:0  start process thread
+[2023-01-10 21:36:29 周二][Debug] File: Line:0  update_text
+[2023-01-10 21:36:41 周二][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-10 21:38:59 周二][Debug] File: Line:0  GUI start
+[2023-01-10 21:38:59 周二][Debug] File: Line:0  start process thread
+[2023-01-10 21:39:00 周二][Debug] File: Line:0  update_text
+[2023-01-10 21:39:23 周二][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-10 21:46:47 周二][Debug] File: Line:0  GUI start
+[2023-01-10 21:46:47 周二][Debug] File: Line:0  start process thread
+[2023-01-10 21:46:47 周二][Debug] File: Line:0  update_text
+[2023-01-10 21:47:06 周二][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-10 21:50:47 周二][Debug] File: Line:0  GUI start
+[2023-01-10 21:50:47 周二][Debug] File: Line:0  start process thread
+[2023-01-10 21:50:47 周二][Debug] File: Line:0  update_text
+[2023-01-10 21:50:53 周二][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-10 21:52:06 周二][Debug] File: Line:0  GUI start
+[2023-01-10 21:52:06 周二][Debug] File: Line:0  start process thread
+[2023-01-10 21:52:07 周二][Debug] File: Line:0  update_text
+[2023-01-10 21:52:10 周二][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-10 21:56:14 周二][Debug] File: Line:0  GUI start
+[2023-01-10 21:56:14 周二][Debug] File: Line:0  start process thread
+[2023-01-10 21:56:15 周二][Debug] File: Line:0  update_text
+[2023-01-10 21:56:53 周二][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-10 22:00:35 周二][Debug] File: Line:0  GUI start
+[2023-01-10 22:00:35 周二][Debug] File: Line:0  start process thread
+[2023-01-10 22:00:36 周二][Debug] File: Line:0  update_text
+[2023-01-10 22:00:40 周二][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-10 22:03:39 周二][Debug] File: Line:0  GUI start
+[2023-01-10 22:03:39 周二][Debug] File: Line:0  start process thread
+[2023-01-10 22:03:39 周二][Debug] File: Line:0  update_text
+[2023-01-10 22:07:09 周二][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-10 22:12:08 周二][Debug] File: Line:0  GUI start
+[2023-01-10 22:12:08 周二][Debug] File: Line:0  start process thread
+[2023-01-10 22:12:08 周二][Debug] File: Line:0  update_text
+[2023-01-10 22:12:13 周二][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-10 22:17:53 周二][Debug] File: Line:0  GUI start
+[2023-01-10 22:17:54 周二][Debug] File: Line:0  start process thread
+[2023-01-10 22:17:54 周二][Debug] File: Line:0  update_text
+[2023-01-10 22:18:00 周二][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-10 22:21:11 周二][Debug] File: Line:0  GUI start
+[2023-01-10 22:21:11 周二][Debug] File: Line:0  start process thread
+[2023-01-10 22:21:12 周二][Debug] File: Line:0  update_text
+[2023-01-10 22:21:46 周二][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-10 22:22:33 周二][Debug] File: Line:0  GUI start
+[2023-01-10 22:22:33 周二][Debug] File: Line:0  start process thread
+[2023-01-10 22:22:34 周二][Debug] File: Line:0  update_text
+[2023-01-10 22:22:39 周二][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-10 22:23:30 周二][Debug] File: Line:0  GUI start
+[2023-01-10 22:23:30 周二][Debug] File: Line:0  start process thread
+[2023-01-10 22:23:31 周二][Debug] File: Line:0  update_text
+[2023-01-10 22:23:52 周二][Fatal] File: Line:0  QThread: Destroyed while thread is still running
+[2023-01-10 22:42:42 周二][Debug] File: Line:0  GUI start
+[2023-01-10 22:42:42 周二][Debug] File: Line:0  start process thread
+[2023-01-10 22:42:43 周二][Debug] File: Line:0  update_text
+[2023-01-10 22:54:05 周二][Fatal] File: Line:0  QThread: Destroyed while thread is still running

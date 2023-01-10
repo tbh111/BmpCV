@@ -8,10 +8,14 @@
 #include "filter.h"
 
 int main() {
-    std::cout << "input file" << std::endl;
-    std::string path;
-    std::cin >> path;
-    BmpCV::Img im = BmpCV::readImg(path);
+//    std::cout << "input file" << std::endl;
+//    std::string path;
+//    std::cin >> path;
+    BmpCV::Img im = BmpCV::readImg("bmp_sample/lena_nearest_100_100.bmp");
+    BmpCV::double_mat dct = BmpCV::imgDCT2D(im);
+    BmpCV::Img dct_img = BmpCV::imgDCTNormalize(dct);
+    BmpCV::Img idct_img = BmpCV::imgIDCT2D(dct);
+
 //    BmpCV::Img im_gray = BmpCV::removeColor(im);
 //    BmpCV::Img pad = BmpCV::imgPadding(im_gray);
 //    BmpCV::Cp_mat fft = BmpCV::imgFFT2D(pad);
@@ -34,7 +38,7 @@ int main() {
 //    BmpCV::Img im_trans = BmpCV::translationImg(im, 20, 20, BmpCV::point_pair_3d(255, 255, 255));
 
     BmpCV::createWindow();
-    BmpCV::imgShow(im);
+    BmpCV::imgShow(idct_img);
 
 
 

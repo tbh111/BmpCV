@@ -175,9 +175,9 @@ namespace BmpCV {
                     fseek(img_fd, row_size - row_data, SEEK_CUR);
                 }
                 for(int j=0; j<src_img.pixel_count; j++) {
-                    *(src_img.data+3*j) = (uchar)(src_img.color_map[(int)*(data_index+j)].green_mask);
-                    *(src_img.data+3*j+1) = (uchar)(src_img.color_map[(int)*(data_index+j)].red_mask);
-                    *(src_img.data+3*j+2) = (uchar)(src_img.color_map[(int)*(data_index+j)].blue_mask);
+                    *(src_img.data+3*j) = (uchar)(src_img.color_map[(int)*(data_index+j)].blue_mask);
+                    *(src_img.data+3*j+1) = (uchar)(src_img.color_map[(int)*(data_index+j)].green_mask);
+                    *(src_img.data+3*j+2) = (uchar)(src_img.color_map[(int)*(data_index+j)].red_mask);
                 }
                 src_img.pixel_count*=3;
             }

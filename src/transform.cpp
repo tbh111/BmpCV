@@ -274,6 +274,128 @@ namespace BmpCV {
         return shift_mat;
     }
 
+    double_mat imgDCT2D(const Img& src_img) {
+        Img gray_img = removeColor(src_img);
+        double_mat mat(gray_img.height, std::vector<double >(gray_img.width));
+        double_mat mat1(gray_img.height, std::vector<double >(gray_img.width));
+        double a1=0.0, a2 = 0.0;
+
+        for(int i1=0; i1<gray_img.height; i1++) {
+            for(int j1=0; j1<gray_img.width; j1++) {
+                if(j1 == 0)
+                    a1 = sqrt(1.0 / gray_img.width);
+                else
+                    a1 = sqrt(2.0 / gray_img.width);
+                double temp = 0.0;
+                for (int k1=0; k1<gray_img.width; k1++) {
+                    temp += double(gray_img.loc(i1, k1, 0)) / 255 * cos((2*k1 + 1) * j1 * M_PI / (2*gray_img.width));
+                }
+                mat[i1][j1] = a1 * temp;
+            }
+        }
+
+        for(int i2=0; i2<gray_img.width; i2++) {
+            for(int j2=0; j2<gray_img.height; j2++) {
+                if(j2 == 0)
+                    a2 = sqrt(1.0 / gray_img.height);
+                else
+                    a2 = sqrt(2.0 / gray_img.height);
+                double temp = 0.0;
+                for (int k2=0; k2<gray_img.height; k2++) {
+                    temp += mat[k2][i2] * cos((2*k2 + 1) * j2 * M_PI / (2*gray_img.height));
+                }
+                mat1[j2][i2] = a2 * temp;
+            }
+        }
+        return mat1;
+    }
+
+    Img imgDCTNormalize(const double_mat& mat) {
+        int height = mat.size();
+        int width = mat[0].size();
+        Img dct_img = Img(width, height, COLOR_8UC1);
+
+        for(int i=0; i<height; i++) { // same display method as matlab
+            for(int j=0; j<width; j++) {
+                if(mat[i][j] > 1.0)
+                    dct_img.iloc(i, j, 0) = 255;
+                else if(mat[i][j] < 0.0)
+                    dct_img.iloc(i, j, 0) = 0;
+                else {
+                    dct_img.iloc(i, j, 0) = mat[i][j] * 255;
+                }
+            }
+        }
+        return dct_img;
+    }
+
+    Img imgIDCT2D(const double_mat& mat) {
+        int height = mat.size();
+        int width = mat[0].size();
+        Img idct_img = Img(width, height, COLOR_8UC1);
+        double_mat mat1(height, std::vector<double >(width));
+        double_mat mat2(height, std::vector<double >(width));
+        double a1=0.0, a2 = 0.0;
+
+//        for(int i1=0; i1<height; i1++) {
+//            for(int j1=0; j1<width; j1++) {
+//                double temp = 0.0;
+//                for (int k1=0; k1<width; k1++) {
+//                    if(k1 == 0)
+//                        a1 = sqrt(1.0 / width);
+//                    else
+//                        a1 = sqrt(2.0 / width);
+//                    temp += a1 * double(mat[i1][k1]) * cos((2*k1 + 1) * j1 * M_PI / (2*width));
+//                }
+//                mat1[i1][j1] = temp;
+//            }
+//        }
+//
+//        for(int i2=0; i2<width; i2++) {
+//            for(int j2=0; j2<height; j2++) {
+//                double temp = 0.0;
+//                for (int k2=0; k2<height; k2++) {
+//                    if(k2 == 0)
+//                        a2 = sqrt(1.0 / height);
+//                    else
+//                        a2 = sqrt(2.0 / height);
+//                    temp += a2 * mat1[k2][i2] * cos((2*k2 + 1) * j2 * M_PI / (2*height));
+//                }
+//                mat2[j2][i2] = temp * 255;
+//                if(mat2[j2][i2] < 0) {
+//                    idct_img.iloc(j2, i2, 0) = 0;
+//                }
+//                else if(mat2[j2][i2] > 255) {
+//                    idct_img.iloc(j2, i2, 0) = 255;
+//                }
+//                else {
+//                    idct_img.iloc(j2, i2, 0) = static_cast<uchar>(temp * 255);
+//                }
+//            }
+//        }
+
+        for(int i1=0; i1<height; i1++) { // o((n)^4), very slow
+            for(int j1=0; j1<width; j1++) {
+                double temp = 0.0;
+                for(int i11=0; i11<height; i11++) {
+                    for(int j11=0; j11<width; j11++) {
+                        if(i11 == 0)
+                            a1 = sqrt(1.0 / height);
+                        else
+                            a1 = sqrt(2.0 / height);
+                        if(j11 == 0)
+                            a2 = sqrt(1.0 / width);
+                        else
+                            a2 = sqrt(2.0 / width);
+                        temp += a1 * a2 * mat[i11][j11] * cos((2*i1+1)* i11 * M_PI / (2*height))
+                                * cos((2*j1+1) * j11 * M_PI /(2*width));
+                    }
+                }
+                idct_img.iloc(i1, j1, 0) = temp * 255;
+            }
+        }
+        return idct_img;
+    }
 
 } // BmpCV
 
